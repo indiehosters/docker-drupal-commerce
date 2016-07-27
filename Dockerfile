@@ -11,3 +11,5 @@ RUN curl -sS https://getcomposer.org/installer | php \
 RUN composer config repositories.drupal composer https://packagist.drupal-composer.org \
  && composer require "drupal/commerce 8.2.x-dev" --prefer-dist \
  && chown -R www-data:www-data modules
+ 
+VOLUME /var/www/html
